@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01a-Zd-dkB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Social Feed Post-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftySocialPostFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ng4-6v-E35">
+                                <rect key="frame" x="67" y="138" width="241" height="30"/>
+                                <color key="backgroundColor" red="0.71764705880000002" green="0.6588235294" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Post to Facebook">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPostToFacebookPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0nE-h0-8d5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwK-iP-Ibg">
+                                <rect key="frame" x="67" y="206" width="241" height="30"/>
+                                <color key="backgroundColor" red="0.71764705880000002" green="0.6588235294" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Post to Twitter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPostToTwitterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XcJ-eX-q4X"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ng4-6v-E35" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="74" id="4ic-Ch-pPE"/>
+                            <constraint firstAttribute="trailing" secondItem="ng4-6v-E35" secondAttribute="trailing" constant="67" id="Br1-Py-fId"/>
+                            <constraint firstItem="bwK-iP-Ibg" firstAttribute="top" secondItem="ng4-6v-E35" secondAttribute="bottom" constant="38" id="F2D-1r-hBT"/>
+                            <constraint firstItem="ng4-6v-E35" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="67" id="g4c-CT-qVi"/>
+                            <constraint firstAttribute="trailing" secondItem="bwK-iP-Ibg" secondAttribute="trailing" constant="67" id="gdF-2N-R6E"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bwK-iP-Ibg" secondAttribute="bottom" constant="431" id="hCW-pq-esK"/>
+                            <constraint firstItem="bwK-iP-Ibg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="67" id="sfr-d6-JAg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Social Feed Post" id="7yE-uD-2Qf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="135.38230884557723"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jws-Kg-00p">
+            <objects>
+                <navigationController id="01a-Zd-dkB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3JW-6w-byZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gdi-2W-VWF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Pa-65-zlW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-625" y="135"/>
+        </scene>
+    </scenes>
+</document>
